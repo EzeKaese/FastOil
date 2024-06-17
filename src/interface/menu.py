@@ -4,6 +4,7 @@ import os
 from PIL import Image
 from customtkinter import CTkFont
 from registro import open_registro
+from about import open_about
 
 customtkinter.set_appearance_mode('dark')
 customtkinter.set_default_color_theme('dark-blue')
@@ -140,7 +141,8 @@ def create_main_window():
     btn_catalogo.pack(padx=20, pady=20)
     btn_catalogo.place(x=552.5, y=340)
 
-    btn_info = customtkinter.CTkButton(master=frame,
+    btn_info = customtkinter.CTkButton(command=open_about,
+                                       master=frame,
                                        text="i",
                                        corner_radius=50,
                                        width=20,
