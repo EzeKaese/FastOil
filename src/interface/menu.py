@@ -5,6 +5,8 @@ from PIL import Image
 from customtkinter import CTkFont
 from registro import open_registro
 from about import open_about
+from productos import open_productos
+from estadistica import open_estadistica
 
 customtkinter.set_appearance_mode('dark')
 customtkinter.set_default_color_theme('dark-blue')
@@ -59,7 +61,8 @@ def create_main_window():
     btn_registro.pack(padx=20, pady=20)
     btn_registro.place(x=10, y=15)
 
-    btn_productos = customtkinter.CTkButton(master=frame,
+    btn_productos = customtkinter.CTkButton(command=open_productos,
+                                            master=frame,
                                             text="AÑADIR\nPRODUCTOS",
                                             corner_radius=20,
                                             width=230,
@@ -74,7 +77,8 @@ def create_main_window():
     btn_productos.pack(padx=20, pady=20)
     btn_productos.place(x=265, y=15)
 
-    btn_estadistica = customtkinter.CTkButton(master=frame,
+    btn_estadistica = customtkinter.CTkButton(command=open_estadistica,
+                                              master=frame,
                                               text="ESTADISTICAS",
                                               corner_radius=20,
                                               width=230,
